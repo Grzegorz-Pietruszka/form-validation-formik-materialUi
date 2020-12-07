@@ -80,7 +80,7 @@ const RegisterForm = () => {
                 }}
                 validationSchema={validationSchema}
             >
-                {({values, isSubmitting, errors, isValid, dirty}) => (
+                {({ isValid, dirty}) => (
                     <Form>
                         <div className={inputGroup}>
                             <FormTextInput name='firstName' type='input' placeholder='First Name'
