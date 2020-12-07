@@ -42,7 +42,7 @@ const FormAcceptConditions = ({label, ...props}) => {
     const errorText = meta && meta.error && meta.touched ? meta.error : '';
 
     return (
-        <FormControl component="fieldset">
+        <FormControl component='fieldset'>
             <FormControlLabel control={<Checkbox {...field} color='primary'/>} label={label}/>
             <FormHelperText error>{errorText}</FormHelperText>
         </FormControl>
@@ -80,7 +80,7 @@ const RegisterForm = () => {
                 }}
                 validationSchema={validationSchema}
             >
-                {({ isValid, dirty}) => (
+                {({isValid, dirty}) => (
                     <Form>
                         <div className={inputGroup}>
                             <FormTextInput name='firstName' type='input' placeholder='First Name'
@@ -89,7 +89,7 @@ const RegisterForm = () => {
                             <FormTextInput name='email' placeholder='Your email' type='input' className={textInput}/>
                         </div>
                         <div>
-                            <FormLabel component="legend">Gender</FormLabel>
+                            <FormLabel component='legend'>Gender</FormLabel>
                             <FormRadioButton name='gender' type='radio' value='male' label='male'/>
                             <FormRadioButton name='gender' type='radio' value='female' label='female'/>
                             <FormRadioButton name='gender' type='radio' value='other' label='other'/>
@@ -101,8 +101,8 @@ const RegisterForm = () => {
 
                         <div>
                             <Button type='submit'
-                                    variant='outlined'
-                                    color="primary"
+                                    variant='contained'
+                                    color='primary'
                                     disabled={!dirty || !isValid}>
                                 Submit
                             </Button>
